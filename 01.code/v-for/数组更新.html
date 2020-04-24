@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/vue.js"></script>
+</head>
+
+<body>
+  <div id='app'>
+    <fieldset>
+      <legend>数组数据更新操作</legend>
+      <button @click="add">添加数据</button><br />
+      名字:<input type="text" v-model="uName" /><br />
+      年龄:<input type="text" v-model="age" /><br />
+      <ul>
+        <li v-for="(item,index) in persons" :key="index">
+          索引:{{index}}---id:{{item.id}}---名字:{{item.name}}---年龄:{{item.age}}
+          <button @click="deletPerson(index)">删除</button>---
+          <button @click="updatePerson(index,{id:++perId,name:uName,age})">修改</button>
+        </li>
+      </ul>
+    </fieldset>
+  </div>
+  <script>
+    const vm = new Vue({
+      el:'#app',
+      uName:'',
+      perId:'',
+      age:'',
+      data:{
+        persons:[
+          {id:1,name:'吴亦凡',age:1},
+          {id:2,name:'蔡徐坤',age:85},
+          {id:3,name:'周杰伦',age:25},
+        ]
+      },
+      methods:{
+        add(){
+          const person = {
+						id: ++this.perId,
+						name: this.uName,
+						age: this.age,
+          }
+          this.persons.push(person)
+          this.uName = ''
+					this.age = ''
+        },
+        deletPerson(index){
+          this.persons.splice(index, 1)
+        },
+        updatePerson(index, per) {
+					// 最笨的方式
+					this.persons[index].id = per.id
+					this.persons[index].name = per.name
+					this.persons[index].age = per.age
+				}
+      }
+    })
+  </script>
+</body>
+
+</html>

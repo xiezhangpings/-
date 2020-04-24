@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../js/vue.js"></script>
+</head>
+
+<body>
+  <div id='app'>
+    <input type="text" v-model="msg" @keyup="key"><br />
+    <input type="text" v-model="msg1" @keyup.enter="key1">
+    <input type="text" v-model="msg2" @keyup.13="ket2">
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        msg: '123',
+        msg1: '100',
+        msg2: '001'
+      },
+      methods: {
+        key(e) {
+
+          if (e.keyCode === 13) {
+            console.log(this.msg)
+          }
+        },
+
+        key1() {
+          console.log(this.msg2)
+        },
+        key2() {
+          console.log(this.msg3)
+        }
+      }
+    })
+    //   <div id='app'>
+    //   <input type="text" v-model="msg" @keyup="key"><br />
+    //   <input type="text" v-model="msg1" @keyup.enter="key1">
+    //   <input type="text" v-model="msg2" @keyup.13="ket2">
+    // </div>
+    // <script>
+    //   const vm = new Vue({
+    //     el: '#app',
+    //     data: {
+    //       msg: '123',
+    //       msg1: '100',
+    //       msg2: '001'
+    //     },
+    //     methods: {
+    //       key(e) {
+
+    //         if (e.keyCode === 13) {
+    //           console.log(this.msg)
+    //         }
+    //       },
+
+    //       key1() {
+    //         console.log(this.msg2)
+    //       },
+    //       key2() {
+    //         console.log(this.msg3)
+    //       }
+    //     }
+    //   })
+    //   <div id='app'>
+    //   <input type="text" v-model="msg" @keyup="key"><br />
+    //   <input type="text" v-model="msg1" @keyup.enter="key1">
+    //   <input type="text" v-model="msg2" @keyup.13="ket2">
+    // </div>
+    // <script>
+    //   const vm = new Vue({
+    //     el: '#app',
+    //     data: {
+    //       msg: '123',
+    //       msg1: '100',
+    //       msg2: '001'
+    //     },
+    //     methods: {
+    //       key(e) {
+
+    //         if (e.keyCode === 13) {
+    //           console.log(this.msg)
+    //         }
+    //       },
+
+    //       key1() {
+    //         console.log(this.msg2)
+    //       },
+    //       key2() {
+    //         console.log(this.msg3)
+    //       }
+    //     }
+    //   })
+    // 
+  </script>
+</body>
+
+</html>

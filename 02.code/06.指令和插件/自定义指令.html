@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../js/vue.js"></script>
+</head>
+
+<body>
+  <div id='app'>
+    <p v-upper-text="msg"></p>
+    <p v-lower-text="msg"></p>
+  </div>
+  <div id="app2">
+    <p v-upper-text="msg"></p>
+  </div>
+  <script>
+    Vue.directive('upper-text', function (el, binding) {
+      el.innerHTML = binding.value.toUpperCase()
+    })
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        msg: 'i like you'
+      },
+
+      directives: {
+        'lower-text'(el, binding) {
+          el.innerHTML = binding.value.toLowerCase()
+        }
+      }
+    })
+
+    const vm2 = new Vue({
+      el: '#app2',
+      data: {
+        msg: 'i like you'
+      }
+    })
+    //   <div id='app'>
+    //   <p v-upper-text="msg"></p>
+    //   <p v-lower-text="msg"></p>
+    // </div>
+    // <div id="app2">
+    //   <p v-upper-text="msg"></p>
+    // </div>
+    // <script>
+    //   Vue.directive('upper-text', function (el, binding) {
+    //     el.innerHTML = binding.value.toUpperCase()
+    //   })
+
+    //   const vm = new Vue({
+    //     el: '#app',
+    //     data: {
+    //       msg: 'i like you'
+    //     },
+
+    //     directives: {
+    //       'lower-text'(el, binding) {
+    //         el.innerHTML = binding.value.toLowerCase()
+    //       }
+    //     }
+    //   })
+
+    //   const vm2 = new Vue({
+    //     el: '#app2',
+    //     data: {
+    //       msg: 'i like you'
+    //     }
+    //   })
+    //   <div id='app'>
+    //   <p v-upper-text="msg"></p>
+    //   <p v-lower-text="msg"></p>
+    // </div>
+    // <div id="app2">
+    //   <p v-upper-text="msg"></p>
+    // </div>
+    // <script>
+    //   Vue.directive('upper-text', function (el, binding) {
+    //     el.innerHTML = binding.value.toUpperCase()
+    //   })
+
+    //   const vm = new Vue({
+    //     el: '#app',
+    //     data: {
+    //       msg: 'i like you'
+    //     },
+
+    //     directives: {
+    //       'lower-text'(el, binding) {
+    //         el.innerHTML = binding.value.toLowerCase()
+    //       }
+    //     }
+    //   })
+
+    //   const vm2 = new Vue({
+    //     el: '#app2',
+    //     data: {
+    //       msg: 'i like you'
+    //     }
+    //   })
+    // 
+  </script>
+</body>
+
+</html>

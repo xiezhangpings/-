@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/vue.js"></script>
+</head>
+
+<body>
+  <div id='app'>
+    <fieldset>
+      <legend>数据排序及相关操作</legend>
+      <input type="text" v-model="searchName" />
+      <ul>
+        <li v-for="(item,index) in personsArr" :key="index">
+          索引:{{index}}-id:{{item.id}}-名字:{{item.name}}-年龄:{{item.age}}
+        </li>
+      </ul>
+      <button @click="state=1">升序排序</button>
+      <button @click="state=2">降序排序</button>
+      <button @click="state=0">原来排序</button>
+    </fieldset>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        searchName: '',
+        state: 0,
+        persons: [{
+            id: 1,
+            name: '吴亦凡',
+            age: 45
+          },
+          {
+            id: 2,
+            name: '蔡徐坤',
+            age: 5
+          },
+          {
+            id: 3,
+            name: '鹿晗',
+            age: 50
+          },
+          {
+            id: 4,
+            name: '周杰伦',
+            age: 95
+          },
+        ]
+      },
+      computed: {
+        personsArr() {
+          const {
+            state,
+            persons,
+            searchName
+          } = this
+          const arr = persons.filter((item) => item.name.indexOf(searchName) !== -1)
+          if (state !== 0) {
+            arr.sort((p1, p2) => {
+              return state === 2 ? p2.age - p1.age : p1.age - p2.age
+            })
+          }
+          return arr
+        }
+      }
+
+    })
+  </script>
+</body>
+
+</html>

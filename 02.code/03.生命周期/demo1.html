@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../js/vue.js"></script>
+</head>
+
+<body>
+  <div id='app'>
+    <button @click="clearvm">清除</button>
+    <button @click="update">更新</button>
+    <p v-show="isShow">吴亦凡是傻逼</p>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        isShow: false
+      },
+      beforeCreate() {
+        console.log('数据初始化之前', this.isShow)
+      },
+
+      created() {
+        console.log('数据初始化之后', this.isShow)
+      },
+
+      beforeMount() {
+        console.log('页面渲染之前')
+      },
+
+      mounted() {
+        console.log('页面渲染之后')
+      },
+
+      beforeUpdate() {
+
+        console.log('页面更新之前', this.isShow)
+      },
+
+      updated() {
+        console.log('页面更新之后', this.isShow)
+      },
+
+      beforeDestroy() {
+        console.log('销毁之前')
+      },
+      destroyed() {
+        console.log('销毁之后')
+      },
+
+      methods: {
+
+        update() {
+          this.isShow = !this.isShow
+        },
+        clearvm() {
+          this.$destroy()
+        }
+      }
+    })
+    //   <div id='app'>
+    //   <button @click="clearvm">清除</button>
+    //   <button @click="update">更新</button>
+    //   <p v-show="isShow">吴亦凡是傻逼</p>
+    // </div>
+    // <script>
+    //   const vm = new Vue({
+    //     el: '#app',
+    //     data: {
+    //       isShow: false
+    //     },
+    //     beforeCreate() {
+    //       console.log('数据初始化之前', this.isShow)
+    //     },
+
+    //     created() {
+    //       console.log('数据初始化之后', this.isShow)
+    //     },
+
+    //     beforeMount() {
+    //       console.log('页面渲染之前')
+    //     },
+
+    //     mounted() {
+    //       console.log('页面渲染之后')
+    //     },
+
+    //     beforeUpdate() {
+
+    //       console.log('页面更新之前', this.isShow)
+    //     },
+
+    //     updated() {
+    //       console.log('页面更新之后', this.isShow)
+    //     },
+
+    //     beforeDestroy() {
+    //       console.log('销毁之前')
+    //     },
+    //     destroyed() {
+    //       console.log('销毁之后')
+    //     },
+
+    //     methods: {
+
+    //       update() {
+    //         this.isShow = !this.isShow
+    //       },
+    //       clearvm() {
+    //         this.$destroy()
+    //       }
+    //     }
+    //   })
+    //   <div id='app'>
+    //   <button @click="clearvm">清除</button>
+    //   <button @click="update">更新</button>
+    //   <p v-show="isShow">吴亦凡是傻逼</p>
+    // </div>
+    // <script>
+    //   const vm = new Vue({
+    //     el: '#app',
+    //     data: {
+    //       isShow: false
+    //     },
+    //     beforeCreate() {
+    //       console.log('数据初始化之前', this.isShow)
+    //     },
+
+    //     created() {
+    //       console.log('数据初始化之后', this.isShow)
+    //     },
+
+    //     beforeMount() {
+    //       console.log('页面渲染之前')
+    //     },
+
+    //     mounted() {
+    //       console.log('页面渲染之后')
+    //     },
+
+    //     beforeUpdate() {
+
+    //       console.log('页面更新之前', this.isShow)
+    //     },
+
+    //     updated() {
+    //       console.log('页面更新之后', this.isShow)
+    //     },
+
+    //     beforeDestroy() {
+    //       console.log('销毁之前')
+    //     },
+    //     destroyed() {
+    //       console.log('销毁之后')
+    //     },
+
+    //     methods: {
+
+    //       update() {
+    //         this.isShow = !this.isShow
+    //       },
+    //       clearvm() {
+    //         this.$destroy()
+    //       }
+    //     }
+    //   })
+  </script>
+</body>
+
+</html>

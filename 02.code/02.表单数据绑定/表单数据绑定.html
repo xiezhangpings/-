@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../js/vue.js"></script>
+</head>
+
+<body>
+  <!-- <div id='app'>
+    <h2>表单数据绑定操作</h2>
+    <form action="xxx/" method="post">
+      <fieldset>
+        <legend>帐号和密码</legend>
+        用户名: <input type="text" v-model="user.name"><br />
+        密码: <input type="password" v-model="user.pwd"><br />
+      </fieldset>
+      <fieldset>
+        <legend>性别选择器</legend>
+        <input type="radio" name="sex" value="男" v-model="user.sex" />男
+        <input type="radio" name="sex" value="女" v-model="user.sex" />女
+      </fieldset>
+      <fieldset>
+        <legend>爱好选择</legend>
+        <input type="checkbox" value="cf" v-model="user.hobby" />吃饭
+        <input type="checkbox" value="sj" v-model="user.hobby" />睡觉
+        <input type="checkbox" value="ddd" v-model="user.hobby" />打豆豆
+      </fieldset>
+      <fieldset>
+        <legend>城市选择和文本内容</legend>
+        <select v-model="user.cityId">
+          <optgroup label="中国">
+            <option :value="item.id" v-for="(item,index) in user.cities" :key="index">{{item.name}}</option>
+          </optgroup>
+        </select>
+        <br />
+        <textarea v-model="user.text" name="" id="" cols="80" rows="5"></textarea>
+      </fieldset>
+      <input type="submit" value="注册" @click.prevent="register">
+    </form>
+  </div>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        user: {
+          name: '',
+          password: '',
+          sex: '',
+          hobby: ['cf', 'sj'],
+          cityId: 3,
+          cities: [{
+              id: 1,
+              name: '松竹市'
+            },
+            {
+              id: 2,
+              name: '台北市'
+            },
+            {
+              id: 3,
+              name: '天津市'
+            },
+            {
+              id: 4,
+              name: '重庆市'
+            },
+            {
+              id: 5,
+              name: '大庆市'
+            },
+            {
+              id: 6,
+              name: '深圳市'
+            }
+          ],
+          text: '吴亦凡是傻逼'
+        }
+      },
+      // methods: {
+      // 	register(){
+      // 		console.log(this.user.name,this.user.password)
+      // 	}
+      // }
+    })
+  </script>
+   <div id='app'>
+    <h2>表单数据绑定操作</h2>
+    <form action="xxx/" method="post">
+      <fieldset>
+        <legend>帐号和密码</legend>
+        用户名: <input type="text" v-model="user.name"><br />
+        密码: <input type="password" v-model="user.pwd"><br />
+      </fieldset>
+      <fieldset>
+        <legend>性别选择器</legend>
+        <input type="radio" name="sex" value="男" v-model="user.sex" />男
+        <input type="radio" name="sex" value="女" v-model="user.sex" />女
+      </fieldset>
+      <fieldset>
+        <legend>爱好选择</legend>
+        <input type="checkbox" value="cf" v-model="user.hobby" />吃饭
+        <input type="checkbox" value="sj" v-model="user.hobby" />睡觉
+        <input type="checkbox" value="ddd" v-model="user.hobby" />打豆豆
+      </fieldset>
+      <fieldset>
+        <legend>城市选择和文本内容</legend>
+        <select v-model="user.cityId">
+          <optgroup label="中国">
+            <option :value="item.id" v-for="(item,index) in user.cities" :key="index">{{item.name}}</option>
+          </optgroup>
+        </select>
+        <br />
+        <textarea v-model="user.text" name="" id="" cols="80" rows="5"></textarea>
+      </fieldset>
+      <input type="submit" value="注册" @click.prevent="register">
+    </form>
+  </div>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        user: {
+          name: '',
+          password: '',
+          sex: '',
+          hobby: ['cf', 'sj'],
+          cityId: 3,
+          cities: [{
+              id: 1,
+              name: '松竹市'
+            },
+            {
+              id: 2,
+              name: '台北市'
+            },
+            {
+              id: 3,
+              name: '天津市'
+            },
+            {
+              id: 4,
+              name: '重庆市'
+            },
+            {
+              id: 5,
+              name: '大庆市'
+            },
+            {
+              id: 6,
+              name: '深圳市'
+            }
+          ],
+          text: '吴亦凡是傻逼'
+        }
+      },
+      // methods: {
+      // 	register(){
+      // 		console.log(this.user.name,this.user.password)
+      // 	}
+      // }
+    })
+  </script> -->
+  <div id='app'>
+    <h2>表单数据绑定操作</h2>
+    <form action="xxx/" method="post">
+      <fieldset>
+        <legend>帐号和密码</legend>
+        用户名: <input type="text" v-model="user.name"><br />
+        密码: <input type="password" v-model="user.pwd"><br />
+      </fieldset>
+      <fieldset>
+        <legend>性别选择器</legend>
+        <input type="radio" name="sex" value="男" v-model="user.sex" />男
+        <input type="radio" name="sex" value="女" v-model="user.sex" />女
+      </fieldset>
+      <fieldset>
+        <legend>爱好选择</legend>
+        <input type="checkbox" value="cf" v-model="user.hobby" />吃饭
+        <input type="checkbox" value="sj" v-model="user.hobby" />睡觉
+        <input type="checkbox" value="ddd" v-model="user.hobby" />打豆豆
+      </fieldset>
+      <fieldset>
+        <legend>城市选择和文本内容</legend>
+        <select v-model="user.cityId">
+          <optgroup label="中国">
+            <option :value="item.id" v-for="(item,index) in user.cities" :key="index">{{item.name}}</option>
+          </optgroup>
+        </select>
+        <br />
+        <textarea v-model="user.text" name="" id="" cols="80" rows="5"></textarea>
+      </fieldset>
+      <input type="submit" value="注册" @click.prevent="register">
+    </form>
+  </div>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        user: {
+          name: '',
+          password: '',
+          sex: '',
+          hobby: ['cf', 'sj'],
+          cityId: 3,
+          cities: [{
+              id: 1,
+              name: '松竹市'
+            },
+            {
+              id: 2,
+              name: '台北市'
+            },
+            {
+              id: 3,
+              name: '天津市'
+            },
+            {
+              id: 4,
+              name: '重庆市'
+            },
+            {
+              id: 5,
+              name: '大庆市'
+            },
+            {
+              id: 6,
+              name: '深圳市'
+            }
+          ],
+          text: '吴亦凡是傻逼'
+        }
+      },
+      // methods: {
+      // 	register(){
+      // 		console.log(this.user.name,this.user.password)
+      // 	}
+      // }
+    })
+  </script>
+</body>
+
+</html>

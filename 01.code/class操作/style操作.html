@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <p :style="{color:color,fontSize:font}">吴亦凡沙雕</p>
+    <p :style="[color1,font1,bg]">吴亦凡沙雕</p>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        color: 'pink',
+        font: '13px',
+        color1: {
+          color: 'green'
+        },
+        font1: {
+          fontSize: '30px'
+        },
+        bg: {
+          backgroundColor: 'yellow'
+        }
+      }
+    })
+  </script>
+  <div id="app">
+    <p :style="{color:color,fontSize:font}">吴亦凡沙雕</p>
+    <p :style="[color1,font1,bg]">吴亦凡沙雕</p>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        color: 'pink',
+        font: '13px',
+        color1: {
+          color: 'green'
+        },
+        font1: {
+          fontSize: '30px'
+        },
+        bg: {
+          backgroundColor: 'yellow'
+        }
+      }
+    })
+  </script>
+  <div id="app">
+    <p :style="{color:color,fontSize:font}">吴亦凡沙雕</p>
+    <p :style="[color1,font1,bg]">吴亦凡沙雕</p>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        color: 'pink',
+        font: '13px',
+        color1: {
+          color: 'green'
+        },
+        font1: {
+          fontSize: '30px'
+        },
+        bg: {
+          backgroundColor: 'yellow'
+        }
+      }
+    })
+  </script>
+
+
+
+</body>
+
+</html>

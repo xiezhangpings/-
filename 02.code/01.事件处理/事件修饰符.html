@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../js/vue.js"></script>
+  <style>
+    .cls1 {
+      width: 200px;
+      height: 100px;
+      background-color: green
+    }
+
+    .cls2 {
+      width: 100px;
+      height: 50px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='app'>
+    <a href="http://www.jd.com" @click="goJd">京东</a>
+    <a href="http://www.jd.com" @click.prevent="goJd1">大强子</a>
+    <div class="cls1" @click="show">
+      <p class="cls2" @click="show1"></p>
+    </div>
+    <hr>
+    <div class="cls1" @click="show2">
+      <p class="cls2" @click.stop="show3"></p>
+    </div>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      // methods: {
+      //   goJd(e) {
+      //     e.preventDefault()
+      //     console.log('京东')
+      //   },
+      //   goJd1() {
+      //     console.log('京东1')
+      //   },
+      //   show() {
+      //     console.log('外面的div')
+      //   },
+      //   show1(e) {
+      //     e.stopPropagation()
+      //     console.log('里面的p')
+      //   },
+      //   show2() {
+      //     console.log('外面的div2')
+      //   },
+      //   show3() {
+
+      //     console.log('里面的p2')
+      //   }
+      // }
+      // methods: {
+      //   goJd(e) {
+      //     e.preventDefault()
+      //     console.log('京东')
+      //   },
+      //   goJd1() {
+      //     console.log('京东1')
+      //   },
+      //   show() {
+      //     console.log('外面的div')
+      //   },
+      //   show1(e) {
+      //     e.stopPropagation()
+      //     console.log('里面的p')
+      //   },
+      //   show2() {
+      //     console.log('外面的div2')
+      //   },
+      //   show3() {
+
+      //     console.log('里面的p2')
+      //   }
+      // }
+      methods: {
+        goJd(e) {
+          e.preventDefault()
+          console.log('京东')
+        },
+        goJd1() {
+          console.log('京东1')
+        },
+        show() {
+          console.log('外面的div')
+        },
+        show1(e) {
+          e.stopPropagation()
+          console.log('里面的p')
+        },
+        show2() {
+          console.log('外面的div2')
+        },
+        show3() {
+
+          console.log('里面的p2')
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

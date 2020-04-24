@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>每天都被自己帅醒!</title>
+  <link rel="stylesheet" href="">
+  <script type="text/javascript" src="../js/vue.js"></script>
+  <style type="text/css">
+    #app {
+      width: 600px;
+      border: 1px solid red;
+      margin: 0 auto;
+    }
+
+    .cls {
+      color: green;
+    }
+
+    .cls1 {
+      color: deeppink;
+    }
+
+    .cls2 {
+      font-size: 30px;
+    }
+
+    .cls3 {
+      font-size: 1px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <hr>
+  <div id="app">
+    <fieldset>
+      <p :class="myClass">p标签</p>
+      <button @click="myClass='cls1'">改变样式</button>
+    </fieldset>
+    <fieldset>
+      <p :class="{cls:isFlag}">吴亦凡，蔡徐坤</p>
+      <button @click="isFlag=!isFlag">改变样式</button>
+    </fieldset>
+    <fieldset>
+      <p :class="[clsA,clsB,clsC]">吴亦凡，蔡徐坤</p>
+    </fieldset>
+    <fieldset>
+      <p class="cls" :class="clsC">吴亦凡，蔡徐坤</p>
+    </fieldset>
+    <fieldset>
+      <p :class="['cls1','cls2','cls3']">吴亦凡，蔡徐坤</p>
+    </fieldset>
+  </div>
+  <script type="text/javascript">
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        myClass: 'cls',
+        isFlag: false,
+        clsA: 'cls1',
+        clsB: 'cls2',
+        clsC: 'cls3',
+      }
+    })
+  </script>
+  <div id="app">
+    <fieldset>
+      <p :class="myClass">p标签</p>
+      <button @click="myClass='cls1'">改变样式</button>
+    </fieldset>
+    <fieldset>
+      <p :class="{cls:isFlag}">吴亦凡，蔡徐坤</p>
+      <button @click="isFlag=!isFlag">改变样式</button>
+    </fieldset>
+    <fieldset>
+      <p :class="[clsA,clsB,clsC]">吴亦凡，蔡徐坤</p>
+    </fieldset>
+    <fieldset>
+      <p class="cls" :class="clsC">吴亦凡，蔡徐坤</p>
+    </fieldset>
+    <fieldset>
+      <p :class="['cls1','cls2','cls3']">吴亦凡，蔡徐坤</p>
+    </fieldset>
+  </div>
+  <script type="text/javascript">
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        myClass: 'cls',
+        isFlag: false,
+        clsA: 'cls1',
+        clsB: 'cls2',
+        clsC: 'cls3',
+      }
+    })
+  </script>
+  <div id="app">
+    <fieldset>
+      <p :class="myClass">p标签</p>
+      <button @click="myClass='cls1'">改变样式</button>
+    </fieldset>
+    <fieldset>
+      <p :class="{cls:isFlag}">吴亦凡，蔡徐坤</p>
+      <button @click="isFlag=!isFlag">改变样式</button>
+    </fieldset>
+    <fieldset>
+      <p :class="[clsA,clsB,clsC]">吴亦凡，蔡徐坤</p>
+    </fieldset>
+    <fieldset>
+      <p class="cls" :class="clsC">吴亦凡，蔡徐坤</p>
+    </fieldset>
+    <fieldset>
+      <p :class="['cls1','cls2','cls3']">吴亦凡，蔡徐坤</p>
+    </fieldset>
+  </div>
+  <script type="text/javascript">
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        myClass: 'cls',
+        isFlag: false,
+        clsA: 'cls1',
+        clsB: 'cls2',
+        clsC: 'cls3',
+      }
+    })
+  </script>
+
+</body>
+
+</html>

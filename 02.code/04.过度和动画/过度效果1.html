@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../js/vue.js"></script>
+  <style>
+    .fade-enter-active {
+      transition: all 1s;
+    }
+
+    .fade-leave-active {
+      transition: all 2s;
+    }
+
+    .fade-enter,
+    .fade-leave-to {
+      transform: translateX(100px);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div id='app'>
+    <button @click="isShow=!isShow">显示</button>
+    <transition name="fade">
+      <p :style='mycolor' v-show="isShow">吴亦凡是傻逼</p>
+    </transition>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        isShow: false,
+        mycolor: {
+          color: 'pink'
+        }
+      }
+    })
+  </script>
+  <div id='app'>
+    <button @click="isShow=!isShow">显示</button>
+    <transition name="fade">
+      <p :style='mycolor' v-show="isShow">吴亦凡是傻逼</p>
+    </transition>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        isShow: false,
+        mycolor: {
+          color: 'pink'
+        }
+      }
+    })
+  </script> -->
+  <div id='app'>
+    <button @click="isShow=!isShow">显示</button>
+    <transition name="fade">
+      <p :style='mycolor' v-show="isShow">吴亦凡是傻逼</p>
+    </transition>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        isShow: false,
+        mycolor: {
+          color: 'pink'
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
